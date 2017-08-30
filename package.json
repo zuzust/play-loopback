@@ -9,7 +9,9 @@
     "dev": "nodemon server/server.js --watch common --watch server",
     "lint": "eslint .",
     "start": "node .",
-    "posttest": "npm run lint && nsp check"
+    "test": "NODE_ENV=test mocha test/**/*.test.js",
+    "test:watch": "npm run test -- --watch",
+    "posttest": "echo npm run lint && nsp check"
   },
   "dependencies": {
     "compression": "^1.0.3",
@@ -22,8 +24,10 @@
     "loopback": "^3.0.0"
   },
   "devDependencies": {
+    "chai": "4.1.1",
     "eslint": "^3.17.1",
     "eslint-config-loopback": "^8.0.0",
+    "mocha": "3.5.0",
     "nodemon": "1.11.0",
     "nsp": "^2.1.0"
   },
