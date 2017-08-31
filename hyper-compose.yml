@@ -1,0 +1,8 @@
+version: '2'
+services:
+  mongo:
+    image: mongo:latest
+    size: s4
+    ports:
+      - "27017:27017"
+    fip: 209.177.93.195
