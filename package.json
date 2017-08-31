@@ -16,12 +16,12 @@
     }
   },
   "scripts": {
-    "dev": "nodemon server/server.js --watch common --watch server",
     "lint": "eslint .",
-    "start": "node .",
-    "test": "NODE_ENV=test mocha test/**/*.test.js",
     "test:watch": "npm run test -- --watch",
-    "posttest": "echo npm run lint && nsp check",
+    "test": "NODE_ENV=test mocha test/**/*.test.js",
+    "posttest": "npm run lint && nsp check",
+    "start": "node .",
+    "dev": "nodemon server/server.js --watch common --watch server",
     "now:deploy": "now --public",
     "now:alias": "now alias",
     "now": "npm run now:deploy && npm run now:alias"
