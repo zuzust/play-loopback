@@ -1,5 +1,9 @@
 'use strict';
 
+if (process.env.NODE_ENV !== 'production') {
+  require('dotenv').config();
+}
+
 var loopback = require('loopback');
 var boot = require('loopback-boot');
 
