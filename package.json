@@ -11,7 +11,8 @@
       "play-loopback"
     ],
     "env": {
-      "MONGODB_URL": "@mongodb-url",
+      "DB_CONNECTOR": "@db-connector",
+      "DB_URL": "@db-url",
       "NODE_ENV": "production"
     }
   },

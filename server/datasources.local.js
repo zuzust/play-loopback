@@ -1,13 +1,13 @@
-const mongodbUrl = process.env.MONGODB_URL;
+const dbUrl = process.env.DB_URL;
 
-if (mongodbUrl) {
-  console.log('Using MongoDB url:', mongodbUrl)
+if (dbUrl) {
+  console.log('Using DB url:', dbUrl)
 
   const dataSources = {
     db: {
       name: 'db',
-      connector: 'mongodb',
-      url: mongodbUrl,
+      connector: process.env.DB_CONNECTOR,
+      url: dbUrl,
     }
   }
 
